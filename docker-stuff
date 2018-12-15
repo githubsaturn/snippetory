@@ -1,0 +1,4 @@
+
+# get specific field out using the format arg:
+
+docker service inspect captain-nginx --format {{.Spec.TaskTemplate.ContainerSpec.Image}}
