@@ -1,0 +1,9 @@
+Merge last two commits into one:
+https://stackoverflow.com/questions/2563632/how-can-i-merge-two-commits-into-one-if-i-already-started-rebase
+
+git reset --soft "HEAD^"
+git commit --amend
+
+
+
+
