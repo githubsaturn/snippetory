@@ -11,7 +11,7 @@ docker exec -it $(docker ps --filter name=captain-captain -q) /bin/bash
 
 
 
-# Running commands from a running container
+# Running commands from a Running Service
 
 docker exec -it $(docker ps --filter name=captain-certbot -q) /bin/sh -c \
    'certbot certificates --non-interactive; certbot renew --non-interactive'
