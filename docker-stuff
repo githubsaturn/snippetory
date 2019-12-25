@@ -22,3 +22,8 @@ docker exec -it $(docker ps --filter name=captain-certbot -q) /bin/sh -c \
 
 docker service logs captain-nginx  2>&1 | grep "POST /api/v2/login" | grep -oE "\b([0-9]{1,3}\.){3}[0-9]{1,3}\b"
 
+
+# Specify Docker image SHA
+https://stackoverflow.com/questions/25445318/docker-how-do-i-pull-a-specific-build-id
+
+docker pull ubuntu@sha256:45b23dee08af5e43a7fea6c4cf9c25ccf269ee113168c19722f87876677c5cb2
