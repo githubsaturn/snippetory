@@ -12,3 +12,8 @@ ip route add blackhole 123.123.123.123
 
 View journal logs:
 journalctl --since "1 minute ago"
+
+
+To run SSH command and exit:
+https://unix.stackexchange.com/questions/30400/execute-remote-commands-completely-detaching-from-the-ssh-connection
+ssh root@remoteserver '/root/backup.sh </dev/null >/var/log/root-backup.log 2>&1 &'
