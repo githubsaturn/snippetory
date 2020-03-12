@@ -49,3 +49,9 @@ Usage:
 ```
 parallel_commands "cmd arg0 arg1 arg2" "other_cmd arg0 arg2 arg3"
 ```
+
+
+Grep recursive:
+```
+grep --include="*View.java" -nRHI "setVisibility" *
+```
