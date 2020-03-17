@@ -76,4 +76,9 @@ nano /etc/ssh/sshd_config
 #  ChallengeResponseAuthentication no
 #  PasswordAuthentication no
 # UsePAM isn't very important - some say set to no though.
+
+/etc/init.d/ssh reload 
+# or /etc/init.d/ssh restart
+# or service ssh restart
+
 ```
