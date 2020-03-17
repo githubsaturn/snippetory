@@ -69,4 +69,10 @@ chmod 700 ~/.ssh
 nano ~/.ssh/authorized_keys
 # save private keys
 chmod 600 ~/.ssh/authorized_keys
+
+nano /etc/ssh/sshd_config
+## Set these:
+#  ChallengeResponseAuthentication no
+#  PasswordAuthentication no
+# UsePAM isn't very important - some say set to no though.
 ```
