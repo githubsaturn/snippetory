@@ -17,6 +17,7 @@ sudo chmod -R 777 .
 
 Config:
 ```
+# If you use Ubuntu GUI, it'll be in /var/lib/samba/usershares
 pi@raspberrypi:~ $ cat /etc/samba/smb.conf 
 [global]
         map to guest = Bad User
