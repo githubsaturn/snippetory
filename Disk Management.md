@@ -33,14 +33,13 @@ If you can use `fsdisk`, here are the steps:
 - Enter `w` to write the changes!
 
 
-
-## Disk Space
-
-- Use `df -hT` to get the big picture
-- Use `du -ha` to get details about current directory
+3) Put a filesystem on a partition `mkfs -t ext4 /dev/sdb1`
+Or, use `mkfs -t ext4 -m 0 /dev/sdb1` to don't save any space for root user (not necessary if this is a secondary drive)
 
 
 ## Disk Mounting
+
+Run `mount` to view the currently mounted dirs.
 
 1) Connect a new disk, external drive or etc.
 
@@ -56,4 +55,14 @@ mount /dev/sda1 /test
 UUID=2EE334A14F29361D       /some/existing/path/to/mount          ntfs-3g    defaults,users,noatime,nofail,x-systemd.device-timeout=10,rw,umask=0000          0       2
 ```
 
+Run `mount -a` to reload this file.
+
 Note that if you're using `ntfs`, you have to `apt-get install ntfs-3g` and use `ntfs-3g` in `fstab` 
+
+
+
+## Disk Space
+
+- Use `df -hT` to get the big picture
+- Use `du -ha` to get details about current directory
+
