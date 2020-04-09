@@ -1,4 +1,8 @@
-
+PDF to jpg
+```
+mogrify -density 144 -format jpg *pdf
+```
+This works much better than `convert` with regards to the quality.
 
 
 View journal logs:
