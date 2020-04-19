@@ -6,6 +6,32 @@ ssh root@remoteserver '/root/backup.sh </dev/null >/var/log/root-backup.log 2>&1
 ```
 
 
+## SSH Tunneling
+
+1. Tunnel to server
+
+On machine1
+ssh -L 8181:machine2:3389 root@server
+
+Now on Machine1:
+Connect to localhost:8181 will connect to server, then connect to machine2:3389
+
+
+2. Socks Proxy
+
+ssh -D 8181 root@server
+
+set chrome to use socks proxy with `localhost:8181`
+
+
+3. Remote Proxy
+
+ssh -R 8181:homecomputer:3389 root@server
+
+
+now on the server:
+if you connect to server:8181 will connect to homecomputer:3389
+
 ## SSH Config
 
 
