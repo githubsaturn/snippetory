@@ -42,3 +42,5 @@ sudo umount /dev/mmmdrive2
 sudo dd bs=4M if=./raspbian.img of=/dev/sdb
 sudo sync
 ```
+
+(not tested yet) but for rasberry pi, look into this: https://github.com/Drewsif/PiShrink/blob/master/pishrink.sh
