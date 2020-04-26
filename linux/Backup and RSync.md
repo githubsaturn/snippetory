@@ -28,7 +28,9 @@ sudo lsblk
 sudo umount /dev/mmmdrive1
 sudo umount /dev/mmmdrive2
 
-sudo dd bs=4M if=/dev/sdb of=./raspbian.img
+
+sudo DATE_TEXT=`date +"%m-%d-%y"` ; \
+sudo dd bs=4M if=/dev/sdb of=./raspbian_$DATE_TEXT.img ; \
 sudo sync
 ```
 
@@ -39,9 +41,7 @@ sudo lsblk
 sudo umount /dev/mmmdrive1
 sudo umount /dev/mmmdrive2
 
-sudo DATE_TEXT=`date +"%m-%d-%y"` ; \
-sudo dd bs=4M if=/dev/sdb of=./raspbian_$DATE_TEXT.img ; \
-sudo sync
+sudo dd bs=4M if=./raspbian.img of=/dev/sdb
 ```
 
 (not tested yet) but for rasberry pi, look into this: https://github.com/Drewsif/PiShrink/blob/master/pishrink.sh
