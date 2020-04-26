@@ -23,12 +23,22 @@ Ref: [this](https://www.raspberrypi.org/documentation/linux/filesystem/backup.md
 
 Backup:
 ```
+sudo lsblk
+# Make sure that all partitions are unmounted before you start!
+sudo umount /dev/mmmdrive1
+sudo umount /dev/mmmdrive2
+
 sudo dd bs=4M if=/dev/sdb of=./raspbian.img
 sudo sync
 ```
 
 Restore:
 ```
+sudo lsblk
+# Make sure that all partitions are unmounted before you start!
+sudo umount /dev/mmmdrive1
+sudo umount /dev/mmmdrive2
+
 sudo dd bs=4M if=./raspbian.img of=/dev/sdb
 sudo sync
 ```
