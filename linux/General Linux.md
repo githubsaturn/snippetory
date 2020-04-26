@@ -53,3 +53,8 @@ ls | xargs rm # deletes all files!
 printf "1\n2\n3\n" | xargs -it touch {}.txt   # creates 3 files with txt extension
 
 ```
+
+## Exit process after specific log
+```
+program -a something | sed -e '/I finished all the good work/q'
+``
