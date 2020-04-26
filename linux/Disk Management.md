@@ -43,7 +43,7 @@ Run `mount` to view the currently mounted dirs.
 
 1) Connect a new disk, external drive or etc.
 
-2) Get the UUID and `/dev` location of disk by running `blkid`
+2) Get the UUID and `/dev` location of disk by running `blkid` or `lsblk`
 
 3) Temporary mount the disk: (resets after a reboot)
 ```
