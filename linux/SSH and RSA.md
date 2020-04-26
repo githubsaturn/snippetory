@@ -5,6 +5,12 @@ https://unix.stackexchange.com/questions/30400/execute-remote-commands-completel
 ssh root@remoteserver '/root/backup.sh </dev/null >/var/log/root-backup.log 2>&1 &'
 ```
 
+## SSH Logs
+```
+grep "Failed password" /var/log/auth.log
+egrep "Failed|Failure" /var/log/auth.log
+```
+
 
 ## SSH Tunneling
 
