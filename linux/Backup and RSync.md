@@ -39,7 +39,8 @@ sudo lsblk
 sudo umount /dev/mmmdrive1
 sudo umount /dev/mmmdrive2
 
-sudo dd bs=4M if=./raspbian.img of=/dev/sdb
+sudo DATE_TEXT=`date +"%m-%d-%y"` ; \
+sudo dd bs=4M if=/dev/sdb of=./raspbian_$DATE_TEXT.img ; \
 sudo sync
 ```
 
