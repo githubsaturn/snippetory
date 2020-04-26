@@ -54,6 +54,7 @@ mount /dev/sda1 /test
 ```
 UUID=2EE334A14F29361D       /some/existing/path/to/mount          ntfs-3g    defaults,users,noatime,nofail,x-systemd.device-timeout=10,rw,umask=0000          0       2
 ```
+Note that `umask` flag cannot be used with `ext4`.
 
 Run `mount -a` to reload this file.
 
