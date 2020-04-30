@@ -41,14 +41,17 @@ From here: https://wiki.samba.org/index.php/Setting_up_Samba_as_a_Standalone_Ser
 
 Create the user and group:
 ```
-useradd -M -s /sbin/nologin demoUser
-passwd demoUser
-smbpasswd -a demoUser
-groupadd demoGroup
-usermod -aG demoGroup demoUser
-chgrp -R demoGroup /srv/samba/demo/
-chown -R demoUser  /srv/samba/demo/
-chmod -R 2770 /srv/samba/demo/
+MY_SAMBA_USER=demoUser
+MY_SAMBA_GROUP=demoGroup
+MY_SAMBA_PATH=/srv/samba/demo/
+useradd -M -s /sbin/nologin $MY_SAMBA_USER
+passwd $MY_SAMBA_USER
+smbpasswd -a $MY_SAMBA_USER
+groupadd $MY_SAMBA_GROUP
+usermod -aG $MY_SAMBA_GROUP $MY_SAMBA_USER
+chgrp -R $MY_SAMBA_GROUP $MY_SAMBA_PATH
+chown -R $MY_SAMBA_USER  $MY_SAMBA_PATH
+chmod -R 2770 $MY_SAMBA_PATH
 
 pdbedit -L -v # view list of users
 ```
