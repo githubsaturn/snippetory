@@ -70,6 +70,7 @@ interface eth0
   static ip_address=192.168.1.55/24
   static routers=192.168.1.1
   static domain_name_servers=127.0.0.1
+  metric 200 # the lower it is, it's more eager to be used as the default
 ```
 in this example `domain_name_servers=127.0.0.1` is set because the device has a local DNS server running (PiHole).
 
