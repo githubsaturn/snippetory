@@ -13,9 +13,16 @@ sudo smbpasswd -a pi
 
 Permission:
 ```
-# make sure 
-cd /your/shared/path
-sudo chmod -R 777 .
+# make sure for /your/shared/path permissions are good:
+
+cd /
+chmod 755 ./your
+
+cd /your
+chmode 755 ./shared
+
+cd ./shared
+sudo chmod -R 777 path
 ```
 
 Config:
