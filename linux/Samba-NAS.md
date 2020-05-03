@@ -41,6 +41,8 @@ pi@raspberrypi:~ $ cat /etc/samba/smb.conf
         guest only = yes
         create mask = 0777
         directory mask = 0777
+        force user = demoUser
+
 ```
 
 ## Password Protected
