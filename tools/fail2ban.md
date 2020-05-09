@@ -61,3 +61,65 @@ Check regex:
 ```
 raspberrypi# fail2ban-regex -v /var/log/openvpn.log /etc/fail2ban/filter.d/openvpn.local        
 ```
+
+
+### Create Custom Action:
+
+1) Create action at `/etc/fail2ban/action.d/mailgun.local`
+```
+[Definition]
+
+# Option:  actionstart
+# Notes.:  command executed once at the start of Fail2Ban.
+# Values:  CMD
+#
+actionstart = 
+
+# Option:  actionstop
+# Notes.:  command executed once at the end of Fail2Ban
+# Values:  CMD
+#
+actionstop = 
+
+# Option:  actioncheck
+# Notes.:  command executed once before each actionban command
+# Values:  CMD
+#
+actioncheck = 
+
+# Option:  actionban
+# Notes.:  command executed when banning an IP. Take care that the
+#          command is executed with Fail2Ban user rights.
+# Tags:    See jail.conf(5) man page
+# Values:  CMD
+#
+actionban = /home/pi/testfail2ban.sh
+
+# Option:  actionunban
+# Notes.:  command executed when unbanning an IP. Take care that the
+#          command is executed with Fail2Ban user rights.
+# Tags:    See jail.conf(5) man page
+# Values:  CMD
+#
+actionunban = 
+
+[Init]
+
+# Default name of the chain
+#
+name = mailgun
+```
+
+
+2) Change action at a jail, like `/etc/fail2ban/jail.d/openvpn-success.local`
+```
+[openvpn-success]
+enabled  = true
+port     = 1194
+protocol = udp
+filter   = openvpn-success
+logpath  = /var/log/openvpn.log
+maxretry = 1
+
+action = mailgun
+```
