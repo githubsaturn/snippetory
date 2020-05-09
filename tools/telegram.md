@@ -1,6 +1,8 @@
 
 ## Telegram Bot
 
+From [here](https://gist.github.com/dideler/85de4d64f66c1966788c1b2304b9caf1) and [here](https://stackoverflow.com/questions/32423837/telegram-bot-how-to-get-a-group-chat-id/32572159#32572159).
+
 1) Create a bot using BotFather: https://core.telegram.org/bots#6-botfather
 
 2) Get the API token using https://telegram.me/BotFather
