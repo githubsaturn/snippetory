@@ -90,10 +90,10 @@ actioncheck =
 # Option:  actionban
 # Notes.:  command executed when banning an IP. Take care that the
 #          command is executed with Fail2Ban user rights.
-# Tags:    See jail.conf(5) man page
+# Tags:    See jail.conf(5) man page https://manpages.debian.org/experimental/fail2ban/jail.conf.5.en.html#Action_Tags
 # Values:  CMD
 #
-actionban = /home/pi/testfail2ban.sh
+actionban = /home/pi/testfail2ban.sh <ip> <matches>
 
 # Option:  actionunban
 # Notes.:  command executed when unbanning an IP. Take care that the
