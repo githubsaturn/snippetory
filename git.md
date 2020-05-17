@@ -8,6 +8,13 @@ git commit --amend
 ```
 
 
+## git status all subdirectories
+```
+find . -maxdepth 1 -mindepth 1 -type d -exec sh -c '(echo {} && cd {} && git status -s && echo)' \;
+```
+From https://coderwall.com/p/grmruq/git-status-on-all-repos-in-folder
+
+
 ### Search all history for instance of a string being added/removed
 
 https://stackoverflow.com/questions/5816134/how-to-find-the-git-commit-that-introduced-a-string-in-any-branch
