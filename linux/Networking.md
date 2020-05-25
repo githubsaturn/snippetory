@@ -21,6 +21,13 @@ Now add an entry:
 echo 'address=/.myrouter.net/192.168.1.1' | sudo tee /etc/NetworkManager/dnsmasq.d/example.com-wildcard.conf
 ```
 
+Note: alternatively, it may exist in `/etc/dnsmasq.d/` like:
+```
+$ cat /etc/dnsmasq.d/kasra.conf 
+
+address=/localserver.loc/192.168.1.55
+```
+
 
 ### Port in use
 
