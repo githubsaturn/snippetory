@@ -120,6 +120,9 @@ protocol = udp
 filter   = openvpn-success
 logpath  = /var/log/openvpn.log
 maxretry = 1
+bantime = 15
 
 action = mailgun
+         another-action
+
 ```
