@@ -132,8 +132,8 @@ action = mailgun
 
 More Details:
 
-[How Fail2Ban Works DigitalOcean](https://www.digitalocean.com/community/tutorials/how-fail2ban-works-to-protect-services-on-a-linux-server)
-[github gist](https://gist.github.com/drmalex07/463e4c7356bcfb2b3d21ff9fdc5aa6b3)
-[fail2ban with OpenVPN](https://www.fail2ban.org/wiki/index.php/HOWTO_fail2ban_with_OpenVPN)
-[Secure RPie](https://www.raspberrypi.org/documentation/configuration/security.md)
-[RPie PiVPN](http://kamilslab.com/2018/09/13/how-to-check-your-pivpn-logs-on-your-raspberry-pi/)
+- [How Fail2Ban Works DigitalOcean](https://www.digitalocean.com/community/tutorials/how-fail2ban-works-to-protect-services-on-a-linux-server)
+- [github gist](https://gist.github.com/drmalex07/463e4c7356bcfb2b3d21ff9fdc5aa6b3)
+- [fail2ban with OpenVPN](https://www.fail2ban.org/wiki/index.php/HOWTO_fail2ban_with_OpenVPN)
+- [Secure RPie](https://www.raspberrypi.org/documentation/configuration/security.md)
+- [RPie PiVPN](http://kamilslab.com/2018/09/13/how-to-check-your-pivpn-logs-on-your-raspberry-pi/)
