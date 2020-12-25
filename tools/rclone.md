@@ -12,7 +12,8 @@ https://rclone.org/
 
 3- Run
 ```
-rclone copy ./test db:some/path/ -P
+rclone copy ./test mydropbox:some/path/ -P
 ```
-if `test` is a file, it'll sit in `/some/path/test`
-if `test` is a directory, "the content" will sit in `/some/path/*`
+- if `test` is a file, it'll sit in `/some/path/test`
+- if `test` is a directory, "the content" will sit in `/some/path/*`
+- rclone automatically creates the destination path
