@@ -17,3 +17,6 @@ To reattach just run
 screen -r <first few chars of session name via screen -ls>
 ## if only one screen session, no need to enter sessions 
 ```
+
+
+To create a new "window" within the same session, `^A C` . Then do `^A N` / `^A P` to go to next/previous.
