@@ -10,3 +10,10 @@ To view the running sessions
 ```
 screen -ls
 ```
+
+
+To reattach just run
+```
+screen -r <first few chars of session name via screen -ls>
+## if only one screen session, no need to enter sessions 
+```
