@@ -41,3 +41,7 @@ printf "1\n2\n3\n" | xargs -it touch {}.txt   # creates 3 files with txt extensi
 ```
 program -a something | sed -e '/I finished all the good work/q'
 ``
+
+
+## Delete all [sub]directories with some specific name
+rm -rf `find -type d -name node_modules`
