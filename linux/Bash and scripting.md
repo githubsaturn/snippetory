@@ -44,6 +44,6 @@ program -a something | sed -e '/I finished all the good work/q'
 
 
 ## Delete all [sub]directories with some specific name
-```
+```bash
 rm -rf `find -type d -name node_modules`
 ```
