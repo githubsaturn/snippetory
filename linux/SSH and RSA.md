@@ -3,6 +3,10 @@ To run SSH command and exit:
 https://unix.stackexchange.com/questions/30400/execute-remote-commands-completely-detaching-from-the-ssh-connection
 ```
 ssh root@remoteserver '/root/backup.sh </dev/null >/var/log/root-backup.log 2>&1 &'
+
+## OR better:
+
+ssh root@remoteserver "sh -c '(cd /; nohup /backup.sh; rm /backup.sh; echo Done) > ./nohup-backup.log 2>&1 &'"
 ```
 
 ## SSH Logs
