@@ -1,16 +1,24 @@
 
 To run SSH command and exit:
 https://unix.stackexchange.com/questions/30400/execute-remote-commands-completely-detaching-from-the-ssh-connection
-```
+```bash
 ssh root@remoteserver '/root/backup.sh </dev/null >/var/log/root-backup.log 2>&1 &'
 
 ## OR better:
 
 ssh root@remoteserver "sh -c '(cd /; nohup /backup.sh; rm /backup.sh; echo Done) > ./nohup-backup.log 2>&1 &'"
 ```
+## Check if SSH fails
+```bash
+while [ "`bash -c \"(ssh root@remoteserver test -e /backup-files-ready) && echo "1"\"`" != "1" ]; do
+    echo "Waiting..."
+    sleep 15s
+    ((loop_counter++)) && ((loop_counter==120)) && echo "No more retries!!!" && exit 1
+done
+```
 
 ## SSH Logs
-```
+```bash
 grep "Failed password" /var/log/auth.log
 egrep "Failed|Failure" /var/log/auth.log
 ```
@@ -21,7 +29,7 @@ egrep "Failed|Failure" /var/log/auth.log
 1. Tunnel to server
 
 On machine1
-```
+```bash
 ssh -L 8181:machine2:3389 root@server
 ```
 
@@ -30,14 +38,14 @@ Connect to localhost:8181 will connect to server, then connect to machine2:3389
 
 
 2. Socks Proxy
-```
+```bash
 ssh -D 8181 root@server
 ```
 set chrome to use socks proxy with `localhost:8181`
 
 
 3. Remote Proxy
-```
+```bash
 ssh -R 8181:homecomputer:3389 root@server
 ```
 
@@ -82,7 +90,7 @@ Here is a simple step-by-step tutorial on how to setup SSH keys.
 - You need a pair of keys (a private and a public key) they can be shared on many machines.
 - You need to save the "public" key on the server, the private key would sit on your local machine (laptop).
 - SSH to your 
-```
+```bash
 ssh-keygen -m PEM -t rsa -b 4096 -C "caprover" -f ./key -q -N ""
 cat key            # shows your private key
 cat key.pub        # shows your public key
