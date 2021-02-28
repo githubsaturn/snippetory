@@ -13,3 +13,11 @@ To setup Telegraf for For InfluxDB2 `/etc/telegraf/telegraf.conf`
   organization = "my-org"
   bucket = "bucket-telegraf"
 ```
+
+or better:
+```
+      urls = ["$INFLUX_HOST"]
+      token = "$INFLUX_TOKEN"
+      organization = "$INFLUX_ORG" ## Destination bucket to write into.
+      bucket = "bucket-telegraf"
+```
