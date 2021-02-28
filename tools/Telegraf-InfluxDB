@@ -1,0 +1,8 @@
+To setup Telegraf for For InfluxDB2:
+```
+[[outputs.influxdb_v2]]
+  urls = ["http://srv-captain--influxdb2:8086"]
+  token = "123456789123456"
+  organization = "my-org"
+  bucket = "bucket-telegraf"
+```
