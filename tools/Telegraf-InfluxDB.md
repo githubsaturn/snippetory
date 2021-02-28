@@ -50,3 +50,21 @@ For example, Docker template has parts that are ready to. But the same content i
       tag_env = []
 
 ```
+
+
+Notes for mapping of directories from inside a container: https://community.influxdata.com/t/networking-with-telegraf-and-docker/12255
+```
+docker run --name telegraf
+        -v /:/hostfs:ro
+        -v /etc:/hostfs/etc:ro
+	-v /proc:/hostfs/proc:ro
+	-v /sys:/hostfs/sys:ro
+	-v /var:/hostfs/var:ro
+	-v /run:/hostfs/run:ro
+	-e HOST_ETC=/hostfs/etc
+	-e HOST_PROC=/hostfs/proc
+	-e HOST_SYS=/hostfs/sys
+	-e HOST_VAR=/hostfs/var
+	-e HOST_RUN=/hostfs/run
+	-e HOST_MOUNT_PREFIX=/hostfs
+```
