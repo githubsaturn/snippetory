@@ -32,7 +32,7 @@ https://docs.influxdata.com/telegraf/v1.17/administration/configuration/#agent-c
 
 [Templates](https://github.com/influxdata/community-templates#templates) are essentially "Raedy to go" inputs/output for grafana.
 
-For example, Docker template has parts like this:
+For example, Docker template has parts that are ready to. But the same content is also available on grafana [main repo](https://github.com/influxdata/telegraf/tree/master/plugins/inputs/docker)
 
 ```
     [[inputs.docker]]
