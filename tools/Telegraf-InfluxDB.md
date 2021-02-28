@@ -25,3 +25,28 @@ or better:
 
 To set intervals, you can use agent > interval. More details here:
 https://docs.influxdata.com/telegraf/v1.17/administration/configuration/#agent-configuration
+
+
+
+### InfluxDB Templates:
+
+[Templates](https://github.com/influxdata/community-templates#templates) are essentially "Raedy to go" inputs/output for grafana.
+
+For example, Docker template has parts like this:
+
+```
+    [[inputs.docker]]
+      endpoint = "unix:///var/run/docker.sock"
+      gather_services = false
+      container_names = []
+      source_tag = false
+      container_name_include = []
+      container_name_exclude = []
+      timeout = "5s"
+      perdevice = true
+      total = true
+      docker_label_include = []
+      docker_label_exclude = []
+      tag_env = []
+
+```
