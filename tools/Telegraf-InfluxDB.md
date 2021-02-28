@@ -3,7 +3,9 @@ For details, see Automatically configure Telegraf and Manually update Telegraf c
 - https://docs.influxdata.com/influxdb/v2.0/write-data/no-code/use-telegraf/manual-config/
 
 
-To setup Telegraf for For InfluxDB2:
+To setup Telegraf for For InfluxDB2 `/etc/telegraf/telegraf.conf`
+* Looks like telegraf.d directory is not working
+
 ```
 [[outputs.influxdb_v2]]
   urls = ["http://srv-captain--influxdb2:8086"]
