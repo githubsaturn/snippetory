@@ -21,3 +21,6 @@ or better:
       organization = "$INFLUX_ORG" ## Destination bucket to write into.
       bucket = "bucket-telegraf"
 ```
+
+To set intervals, you can use agent > interval. More details here:
+https://docs.influxdata.com/telegraf/v1.17/administration/configuration/#agent-configuration
