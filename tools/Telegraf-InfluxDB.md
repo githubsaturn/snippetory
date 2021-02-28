@@ -1,6 +1,7 @@
 For details, see Automatically configure Telegraf and Manually update Telegraf configurations.
 - https://docs.influxdata.com/influxdb/v2.0/write-data/no-code/use-telegraf/auto-config/
 - https://docs.influxdata.com/influxdb/v2.0/write-data/no-code/use-telegraf/manual-config/
+- https://www.influxdata.com/blog/telegraf-configuration-in-influxdb-2-0/
 
 
 To setup Telegraf for For InfluxDB2 `/etc/telegraf/telegraf.conf`
