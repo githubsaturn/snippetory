@@ -67,3 +67,15 @@ Note that if you're using `ntfs`, you have to `apt-get install ntfs-3g` and use 
 - Use `df -hT` to get the big picture
 - Use `du -ha` to get details about current directory
 
+
+## LVM Disk increase
+```
+#Rescan the volume (put the proper drive in [x] )
+echo 1 > /sys/block/sd[x]/device/rescan
+pvresize /dev/sd[x]
+ 
+#Extend the proper volume (example given below)
+lvextend -l +100%FREE /dev/VGut01/LVut01
+# Extend the file system - XFS filesystems (RHEL 7, Ubuntu 18)
+resize2fs /dev/VGut01/LVut01
+```
