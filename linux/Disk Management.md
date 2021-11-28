@@ -53,6 +53,12 @@ mount /dev/sda1 /test
 3) Permanently mount, `/etc/fstab` to add the following line
 ```
 UUID=2EE334A14F29361D       /some/existing/path/to/mount          ntfs-3g    defaults,users,noatime,nofail,x-systemd.device-timeout=10,rw,umask=0000          0       2
+
+## OR:
+
+/dev/disk/by-uuid/d0720687-824a-469b-8ac7-8f10287715eb   /path/to/mount   ext4   defaults,users,noatime,nofail,x-systemd.device-timeout=10,rw   0    2
+
+
 ```
 Note that `umask` flag cannot be used with `ext4`.
 
