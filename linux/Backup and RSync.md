@@ -4,9 +4,13 @@ For backup on external drive use `rsync`
 ```
 rsync -aP /path/to/src/dir /path/to/destination/
 
+## for download from remote
+rsync -aPh root@11.22.33.44:/path/files ./
+
 # if you also want to delete the deleted files
 rsync -aP /path/to/src/dir /path/to/destination/  --delete
 # TRY AVOID USING THE DELETE OPTION IN CRONJOBS. ALSO, ALWAYS TEST WITH --dry-run.
+# Optionally add h, like -aPh, for human readable
 ```
 
 `a` is for achive which is combination of serveral other flags, e.g., keeping the permissions hardlinks and etc.
