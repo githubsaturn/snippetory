@@ -71,3 +71,10 @@ program -a something | sed -e '/I finished all the good work/q'
 ```bash
 rm -rf `find -type d -name node_modules`
 ```
+
+## Convert a multiline file to single line and back
+```
+cat private.key | openssl base64 | tr -d '\n'
+
+echo $PRIVATE_KEY_BASE_64 | openssl base64 -A -d >~/.ssh/private.key
+```
