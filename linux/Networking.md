@@ -72,6 +72,15 @@ network:
 
 Otherwise, if you're using RPie or older Ubuntu that uses `ifupdown`, do this:
 ```
+
+Find the connection name: `nmcli con`
+Edit the connection: `sudo nmcli con mod "Your Connection Name" ipv4.addresses 192.168.1.XXX/24 ipv4.gateway 192.168.1.1 ipv4.dns "8.8.8.8,8.8.4.4" ipv4.method manual`
+Replace 192.168.1.XXX with your desired IP address and adjust the gateway and DNS as necessary.
+Apply the changes: `sudo nmcli con up "Your Connection Name"`
+<details>
+  <summary>Old instructions</summary>
+  
+
 ➜  ~ cat /etc/dhcpcd.conf
 interface eth0
   static ip_address=192.168.1.55/24
@@ -82,6 +91,8 @@ interface eth0
 in this example `domain_name_servers=127.0.0.1` is set because the device has a local DNS server running (PiHole).
 
 From [here](https://www.ionos.com/digitalguide/server/configuration/provide-raspberry-pi-with-a-static-ip-address/) and [here](https://thepihut.com/blogs/raspberry-pi-tutorials/how-to-give-your-raspberry-pi-a-static-ip-address-update)
+
+</details>
 
 
 ### Wake on lan
