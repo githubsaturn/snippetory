@@ -70,8 +70,6 @@ network:
     version: 2
 ```
 
-Otherwise, if you're using RPie or older Ubuntu that uses `ifupdown`, do this:
-```
 
 Find the connection name: `nmcli con`
 Edit the connection: `sudo nmcli con mod "Your Connection Name" ipv4.addresses 192.168.1.XXX/24 ipv4.gateway 192.168.1.1 ipv4.dns "8.8.8.8,8.8.4.4" ipv4.method manual`
@@ -81,6 +79,8 @@ Apply the changes: `sudo nmcli con up "Your Connection Name"`
   <summary>Old instructions</summary>
   
 
+Otherwise, if you're using RPie or older Ubuntu that uses `ifupdown`, do this:
+```
 ➜  ~ cat /etc/dhcpcd.conf
 interface eth0
   static ip_address=192.168.1.55/24
